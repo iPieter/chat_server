@@ -84,7 +84,7 @@
     <orderEntry type="library" name="Maven: org.springframework.hateoas:spring-hateoas:0.23.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.plugin:spring-plugin-core:1.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.atteo:evo-inflector:1.2.2" level="project" />
-    <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:4.1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:5.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:1.4.196" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.4" level="project" />

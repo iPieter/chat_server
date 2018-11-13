@@ -23,6 +23,6 @@ public class AppConfig {
     }
 
     @Bean
-    public Endpoints endpoints() { return  new Endpoints(new Broker("35.166.188.212", 5672, 15674, -1));}
+    public Endpoints endpoints() { return  new Endpoints(new Broker("35.166.188.212", 5672, "ws://35.166.188.212:15674/ws", ""));}
 
 }
