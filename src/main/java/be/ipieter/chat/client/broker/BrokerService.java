@@ -1,6 +1,7 @@
 package be.ipieter.chat.client.broker;
 
 import be.ipieter.chat.client.Client;
+import be.ipieter.chat.config.Endpoints;
 import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -29,20 +30,15 @@ public class BrokerService
 
     private Channel channel;
 
-    private String brokerURL = "localhost";
-
-    private int brokerPort = 5672;
 
     @Autowired
-    private Environment env;
-
-    public BrokerService()
+    public BrokerService(Endpoints endpoints)
     {
         ConnectionFactory connectionFactory = new ConnectionFactory();
 
-        LOGGER.info( "Broker: {}:{}", brokerURL, brokerPort );
-        connectionFactory.setHost( brokerURL );
-        //connectionFactory.setPort( brokerPort );
+        LOGGER.info( "Broker: {}:{}", endpoints.getBroker().getHostname(), endpoints.getBroker().getAmqpPort() );
+        connectionFactory.setHost( endpoints.getBroker().getHostname() );
+        connectionFactory.setPort( endpoints.getBroker().getAmqpPort() );
         Connection connection = null;
         try
         {
@@ -64,7 +60,6 @@ public class BrokerService
 
             e.printStackTrace();
         }
-
     }
 
     /**

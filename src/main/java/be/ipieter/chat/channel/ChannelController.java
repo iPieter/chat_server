@@ -31,7 +31,6 @@ public class ChannelController
     @Autowired
     private ClientComponent clientComponent;
 
-
     @Autowired
     private StorageStrategy imageStorage;
 
